@@ -2,15 +2,21 @@
 import React from 'react';
 import {TouchableOpacity, View, Text, StyleSheet} from 'react-native';
 
+/*
+    Si se especifica una propiedad como opcional,
+    esto es para quien llama al componente
+*/
 interface Props {
-    title: string,
+    title: string;
+    position?: 'bl' | 'br';
+    onPress: () => void;
 }
 
-export const Fab = ({title}: Props) => {
+export const Fab = ({title, onPress, position = 'br'}: Props) => {
     return (
         <TouchableOpacity
             style={styles.fabLocationBR}
-            onPress={() => console.log('Click')}
+            onPress={onPress}
         >
             <View style={styles.fab}>
                 <Text style={styles.fabText}>{title}</Text>
