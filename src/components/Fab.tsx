@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {TouchableNativeFeedback, View, Text, StyleSheet} from 'react-native';
+import {TouchableNativeFeedback, View, Text, StyleSheet, Platform, TouchableOpacity} from 'react-native';
 
 /*
     Si se especifica una propiedad como opcional,
@@ -13,7 +13,22 @@ interface Props {
 }
 
 export const Fab = ({title, onPress, position = 'br'}: Props) => {
-    return (
+
+	const ios = () => (
+		<TouchableOpacity
+			style={[
+				styles.fabLocation,
+				(position === 'br') ? styles.right : styles.left,
+			]}
+			onPress={onPress}
+		>
+			<View style={styles.fab}>
+				<Text style={styles.fabText}>{title}</Text>
+			</View>
+		</TouchableOpacity>
+	);
+
+	const android = () => (
 		<View
 			style={[
 				styles.fabLocation,
@@ -29,7 +44,9 @@ export const Fab = ({title, onPress, position = 'br'}: Props) => {
 				</View>
 			</TouchableNativeFeedback>
 		</View>
-    );
+	);
+
+    return (Platform.OS === 'ios') ? ios() : android();
 };
 
 const styles = StyleSheet.create({
