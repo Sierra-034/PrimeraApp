@@ -15,22 +15,22 @@ export const FlexScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        flexDirection: 'row',
         backgroundColor: '#28C4D9',
     },
     caja1: {
-        flex: 4,
+        width: 50,
+        height: 100,
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
     },
     caja2: {
-        flex: 1,
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
     },
     caja3: {
-        flex: 1,
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
