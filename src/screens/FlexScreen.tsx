@@ -16,11 +16,10 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'row',
+        justifyContent: 'space-evenly',
         backgroundColor: '#28C4D9',
     },
     caja1: {
-        width: 50,
-        height: 100,
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
