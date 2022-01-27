@@ -14,10 +14,11 @@ export const FlexScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: '#28C4D9',
         flex: 1,
         flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        backgroundColor: '#28C4D9',
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
     },
     caja1: {
         borderWidth: 2,
