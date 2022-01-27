@@ -21,16 +21,20 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end',
     },
     caja1: {
+        flex: 1,
+        alignSelf: 'flex-start',
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
     },
     caja2: {
+        flex: 2,
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
     },
     caja3: {
+        flex: 3,
         borderWidth: 2,
         borderColor: 'white',
         fontSize: 30,
